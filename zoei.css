@@ -1,0 +1,1137 @@
+/* ----------------------------------------------------
+   IMPORT FONTS
+---------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* ----------------------------------------------------
+   UNIVERSAL RESET
+---------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------
+   BODY
+---------------------------------------------------- */
+body {
+    font-family: 'Special Elite', monospace; /* typewriter font */
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ----------------------------------------------------
+   HEADER
+---------------------------------------------------- */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: #fff;
+    background: #000;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #fff;
+    background: #000;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* ----------------------------------------------------
+   NAVIGATION BAR
+---------------------------------------------------- */
+nav {
+    background: rgba(0,0,0,0.85);
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px 0;
+    border-radius: 15px;
+    text-align: center;
+    /* Purple glow only */
+    box-shadow: 0 0 15px #b266ff, 0 0 25px #d699ff;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px #b266ff, 0 0 15px #d699ff;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* ----------------------------------------------------
+   GIF BACKGROUND SECTION
+---------------------------------------------------- */
+.gif-background {
+    background: url('Op Art GIF by Joe Winograd.gif') no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    min-height: calc(100vh - 120px); /* full height minus nav/footer if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------
+   TEXT BOXES
+---------------------------------------------------- */
+.text-box, #about-box, #contact-box, .project-item {
+    background: rgba(0, 0, 0, 0.75);  /* semi-transparent black */
+    padding: 50px 30px;
+    border-radius: 25px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(128, 0, 128, 0.7); /* purple glow around box */
+}
+
+.text-box h2, #about-box h2, #contact-box h2, .project-desc h3 {
+   font-size: 3rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* ----------------------------------------------------
+   PARAGRAPHS
+---------------------------------------------------- */
+.text-box p, #about-box p, #contact-box p, .project-desc p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------
+   IMAGES
+---------------------------------------------------- */
+.img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background: #000;
+    margin: 20px auto;
+    box-shadow: 0 0 15px #b266ff, 0 0 25px #d699ff;
+}
+
+.img-box img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%; /* optional circular */
+}
+
+/* ----------------------------------------------------
+   PROJECT ITEMS
+---------------------------------------------------- */
+.project-item {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
+.img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background: #000;
+    margin: 20px auto;
+    box-shadow: 0 0 15px #b266ff, 0 0 25px #d699ff;
+}
+
+/* CONTACT BOX */
+#contact-box {
+    background: rgba(0,0,0,0.85);
+    border: 2px solid #b266ff;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 15px #b266ff, 0 0 25px #d699ff;
+}
+
+/* Headings and Paragraphs */
+#contact-box h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#contact-box p {
+    font-size: 1.15rem;
+    color: #e8e8ff;
+    margin-bottom: 25px;
+}
+
+/* FORM FIELDS VERTICAL STACK */
+#contact-box form {
+    display: flex;
+    flex-direction: column; /* Stack fields vertically */
+    gap: 15px;
+}
+
+#contact-box label {
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+}
+
+#contact-box input,
+#contact-box textarea {
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #b266ff;
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+}
+
+#contact-box button {
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #b266ff;
+    background: #b266ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact-box button:hover {
+    background: #d699ff;
+    color: #fff;
+}
+/* ---------------- HOME GIF BACKGROUND ---------------- */
+.home-background {
+  background: url('YourGIF.gif') no-repeat center top;
+  background-size: cover;
+  width: 100%;
+  min-height: calc(100vh - 160px); /* nav + header + footer space */
+  display: flex;
+  align-items: center;              /* vertical centering */
+  justify-content: center;          /* horizontal centering */
+}
+
+/* ---------------- TEXT BOX ---------------- */
+.text-box {
+  background: rgba(0,0,0,0.7);       /* black translucent */
+  border: 2px solid #bb88ff;         /* purple glow */
+  border-radius: 20px;
+  width: 90%;                         /* almost full width */
+  max-width: 1200px;
+  padding: 60px 50px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ---------------- HEADER ANIMATION ---------------- */
+.animate-title {
+  font-weight: bold;
+  color: #fff;
+  animation: slideDown 1.5s ease forwards;
+}
+
+.animate-subtitle {
+  font-weight: bold;
+  color: #fff;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ---------------- TEXT ---------------- */
+.text-box h2 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+}
+
+.text-box p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+/* Header animations */
+.animate-title {
+    opacity: 0;
+    animation: fadeInTitle 1.5s forwards;
+}
+
+.animate-subtitle {
+    opacity: 0;
+    animation: fadeInSubtitle 2s forwards 1s; /* appears 1s after title */
+}
+
+/* Welcome section animations */
+.text-box h2 {
+    opacity: 0;
+    animation: fadeInWelcome 2s forwards 2s; /* appears after subtitle */
+}
+
+/* Typing effect for paragraph */
+.text-box p {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #ff77ff; /* cursor */
+    width: 0;
+    opacity: 0;
+    animation: typing 4s steps(40) forwards 3s, blink 0.75s step-end infinite;
+}
+
+/* Keyframes */
+@keyframes fadeInTitle {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInSubtitle {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInWelcome {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animate each sentence one after another */
+.typing-text:nth-child(2) { animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite; animation-delay: 0.5s; }
+.typing-text:nth-child(3) { animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite; animation-delay: 3s; }
+.typing-text:nth-child(4) { animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite; animation-delay: 6s; }
+.typing-text:nth-child(5) { animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite; animation-delay: 9s; }
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #00cfff;
+    box-shadow: none;       /* remove any glow or shadow animation */
+    animation: none;        /* remove any inherited animation */
+    opacity: 1;             /* ensure it’s fully visible */
+    transform: none;        /* reset any transforms */
+}
+
+/* ---------------- HOME PAGE TEXT BOX ---------------- */
+.gif-background .text-box {
+    background: rgba(0, 0, 0, 0.75);  /* semi-transparent black */
+    border: 2px solid #bb88ff;        /* purple glow border */
+    border-radius: 25px;
+    width: 95%;                        /* almost full width */
+    max-width: 1400px;                 /* bigger max width */
+    padding: 80px 60px;                /* bigger padding for more height */
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(128, 0, 128, 0.7); /* stronger glow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Adjust paragraphs inside to better fit the bigger box */
+.gif-background .text-box p {
+    font-size: 1.8rem;                  /* bigger text */
+    line-height: 1.9;                   /* spacing between lines */
+    margin-bottom: 25px;
+    overflow-wrap: break-word;           /* prevent cutting off text */
+}
+.text-box {
+    background: rgba(0,0,0,0.7);   /* semi-transparent black */
+    border: 2px solid #bb88ff;     /* purple glow border */
+    border-radius: 20px;
+    width: 95%;                     /* almost full width */
+    max-width: 1200px;
+    padding: 40px 50px;
+    color: #fff;
+    text-align: left;               /* align text nicely inside box */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    /* text goes from top */
+    gap: 20px;                      /* space between lines */
+    box-sizing: border-box;
+}
+
+/* Headers */
+.text-box h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Typing effect for paragraphs */
+.typing-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #ff77ff; /* cursor */
+    font-size: 1.8rem;
+    line-height: 2;
+    opacity: 0;
+    width: auto;
+}
+
+/* Animate each sentence separately */
+.typing-text:nth-child(2) {
+    animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite;
+    animation-delay: 0.5s;
+}
+.typing-text:nth-child(3) {
+    animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite;
+    animation-delay: 3s;
+}
+.typing-text:nth-child(4) {
+    animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite;
+    animation-delay: 6s;
+}
+.typing-text:nth-child(5) {
+    animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite;
+    animation-delay: 9s;
+}
+
+/* Typing keyframes */
+@keyframes typing {
+    0% { width: 0; opacity: 1; }
+    100% { width: 100%; opacity: 1; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+/* Welcome Header Animation */
+.welcome-header {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInHeader 1.5s forwards; /* header fades in first */
+}
+
+/* Typing effect for paragraphs, starting after header */
+.typing-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #ff77ff; /* cursor */
+    font-size: 1.8rem;
+    line-height: 2;
+    opacity: 0;
+}
+
+/* Animate each sentence with delays after header */
+.typing-text:nth-child(2) { animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite; animation-delay: 1.6s; }
+.typing-text:nth-child(3) { animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite; animation-delay: 4s; }
+.typing-text:nth-child(4) { animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite; animation-delay: 7s; }
+.typing-text:nth-child(5) { animation: typing 2s steps(60) forwards, blink 0.75s step-end infinite; animation-delay: 10s; }
+
+/* Keyframes */
+@keyframes fadeInHeader {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+    from { width: 0; opacity: 1; }
+    to { width: 100%; opacity: 1; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+/* ABOUT PAGE GIF BACKGROUND — SAME AS HOME PAGE */
+.gif-background-about {
+    background: url('Film\ Tuning\ GIF\ by\ Club\ do\ Auto.gif') no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    min-height: calc(100vh - 160px); /* same size as homepage */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+footer {
+    width: 80%;
+    margin: 40px auto 20px;
+    padding: 15px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+
+    /* purple glow like nav */
+    box-shadow: 0 0 15px #b266ff, 
+                0 0 25px #d699ff;
+
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.about-wrapper {
+    display: flex;
+    flex-direction: row; /* side by side on desktop */
+    justify-content: center;
+    align-items: flex-start; /* align top edges */
+    gap: 40px;
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    box-shadow: 0 0 15px #b266ff;
+}
+
+/* Ensure photo and text scale nicely */
+.about-photo img {
+    width: 350px; /* max width of photo */
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid #000;
+    box-shadow: 0 0 15px #b266ff, 0 0 25px #d699ff;
+}
+
+.about-text, #about-box {
+    max-width: 600px; /* text won't get too wide */
+    color: #fff;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    width: 90%;
+    max-width: 1200px;
+
+    background: rgba(0,0,0,0.75);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px #b266ff;
+}
+.about-photo img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;     /* ← NOT circular */
+    border: 2px solid #000;
+    box-shadow: 0 0 15px #b266ff, 0 0 25px #d699ff;
+}
+@media (max-width: 900px) {
+    .about-wrapper {
+        flex-direction: column; /* stack vertically on small screens */
+        align-items: center;    /* center items */
+        text-align: center;     /* optional: center text */
+    }
+
+    .about-photo img {
+        width: 250px; /* smaller photo on mobile */
+        margin-bottom: 20px;
+    }
+
+    #about-box {
+        max-width: 100%;
+    }
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+footer {
+    background: rgba(0,0,0,0.85);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #b266ff;
+    box-shadow: 0 0 15px #b266ff;
+    color: #fff;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.about-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-content {
+    flex: 1; /* pushes the footer down */
+}
+.about-float {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: zoomIn 1.5s ease forwards;
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+/* Container for all home page boxes */
+.home-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 40px;
+}
+
+/* Header Box */
+.header-box {
+    background: rgba(0,0,0,0.8);
+    padding: 30px 40px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(128,0,128,0.7);
+}
+
+/* Header Text */
+.header-box h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin: 0;
+}
+
+/* Small GIF next to header */
+.header-gif {
+    width: 120px;   /* adjust size */
+    height: auto;
+    margin-left: 20px;
+}
+
+/* Paragraph Box */
+.paragraph-box {
+    background: rgba(0,0,0,0.8);
+    padding: 40px 30px;
+    border-radius: 25px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(128,0,128,0.7);
+}
+
+/* Paragraph Text */
+.paragraph-box p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Animations */
+.line-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInLine 1s forwards;
+}
+
+/* Stagger animation for each line */
+.line-animate:nth-child(1) { animation-delay: 0.5s; }
+.line-animate:nth-child(2) { animation-delay: 2s; }
+.line-animate:nth-child(3) { animation-delay: 3.5s; }
+.line-animate:nth-child(4) { animation-delay: 5s; }
+
+@keyframes fadeInLine {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* Home Boxes Container */
+.home-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Header Box (fits content) */
+.header-box {
+    background: rgba(0,0,0,0.8);
+    padding: 20px 30px;
+    border-radius: 25px;
+    display: inline-flex;      /* shrink-wrap around content */
+    align-items: center;       /* vertically center text and gif */
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 0 20px rgba(128,0,128,0.7); /* purple glow */
+}
+
+/* Header Text */
+.header-box h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+}
+
+/* GIF next to header */
+.header-gif {
+    width: 80px;       /* adjust size as needed */
+    height: auto;
+}
+
+/* Paragraph Box */
+.paragraph-box {
+    background: rgba(0,0,0,0.75);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(128,0,128,0.7);
+    max-width: 900px;
+}
+
+.paragraph-box p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+/* Box around header + GIF */
+.header-box {
+    background: rgba(0,0,0,0.8);
+    padding: 20px 30px;
+    border-radius: 25px;
+    display: inline-flex; /* shrink-wrap */
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 0 20px rgba(128,0,128,0.7); /* purple glow */
+    margin-bottom: 30px;
+}
+
+/* Header text */
+.header-box h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+}
+
+/* Small GIF next to header */
+.header-gif {
+    width: 80px;
+    height: auto;
+}
+
+/* Paragraph box */
+/* Paragraph Box - shrink to fit text like header */
+.paragraph-box {
+    background: rgba(0,0,0,0.8);
+    padding: 20px 25px;          /* smaller padding like header */
+    border-radius: 25px;
+    display: inline-block;       /* shrink-wrap */
+    box-shadow: 0 0 20px rgba(128,0,128,0.7);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.paragraph-box p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0;                   /* remove extra bottom margin */
+}
+/* ---------------- HOME GIF BACKGROUND ---------------- */
+.home-background {
+  background: url('YourGIF.gif') no-repeat center top;
+  background-size: cover;
+  width: 100%;
+  min-height: calc(100vh - 160px); /* nav + header + footer space */
+  display: flex;
+  align-items: center;              /* vertical centering */
+  justify-content: center;          /* horizontal centering */
+}
+
+/* ---------------- TEXT BOX ---------------- */
+.text-box {
+  background: rgba(0,0,0,0.7);       /* black translucent */
+  border: 2px solid #bb88ff;         /* purple glow */
+  border-radius: 20px;
+  width: 90%;                         /* almost full width */
+  max-width: 1200px;
+  padding: 60px 50px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ---------------- HEADER ANIMATION ---------------- */
+.animate-title {
+  font-weight: bold;
+  color: #fff;
+  animation: slideDown 1.5s ease forwards;
+}
+
+.animate-subtitle {
+  font-weight: bold;
+  color: #fff;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ---------------- TEXT ---------------- */
+.text-box h2 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+}
+
+.text-box p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+  display: flex;
+  justify-content: space-between; /* space between text and video */
+  align-items: center;
+  gap: 50px; /* space between text and video */
+  padding: 80px 10%;
+  flex-wrap: wrap; /* responsive wrapping */
+}
+
+.hero-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.header-gif {
+  width: 80px;
+  height: auto;
+  margin-left: 15px;
+}
+
+/* ---------------- HOME BOXES ---------------- */
+.home-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.header-box, .paragraph-box {
+  background: rgba(0,0,0,0.75);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(128,0,128,0.7);
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* HEADER BOX CONTENT */
+.header-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.header-box img {
+  width: 100px;
+  height: auto;
+  margin-top: 15px;
+}
+
+/* PARAGRAPH BOX */
+.paragraph-box p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-video video {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+/* Projects page - center h2 and p */
+.projects-page .project-section {
+    text-align: center;        /* center content */
+    margin: 60px auto;         /* vertical spacing from top */
+    max-width: 800px;          /* limit width for readability */
+    padding: 0 20px;           /* horizontal padding for small screens */
+}
+
+.projects-page .project-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;       /* space between h2 and paragraph */
+    font-weight: bold;
+}
+
+.projects-page .project-section p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin: 0 auto 40px auto;  /* center and add bottom spacing */
+    max-width: 700px;          /* prevent super wide text */
+    color: #fff;               /* ensure text is visible on dark background */
+}
+/* Only for Projects page */
+.projects-page {
+  background: url('Film\ Tuning\ GIF\ by\ Club\ do\ Auto.gif') no-repeat center top;
+  background-size: cover;     /* make GIF cover the page */
+  min-height: 100vh;          /* ensure it fills the viewport */
+  width: 100%;
+  background-attachment: fixed; /* optional: keeps GIF in place while scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 100px;         /* optional: space from top */
+}
+/* Projects page images */
+.projects-page .project-item .img-box img {
+    width: 400px;      /* make images bigger */
+    height: auto;      /* maintain aspect ratio */
+    border-radius: 15px; /* optional: keeps rounded corners */
+    box-shadow: 0 0 20px rgba(128,0,128,0.7), 0 0 30px rgba(215,150,255,0.5); /* optional glow */
+}
+/* Contact page header animations */
+.contact-animate-title {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeSlideDownTitle 1.5s forwards;
+}
+
+.contact-animate-subtitle {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeSlideDownSubtitle 1.5s forwards 1s; /* appears 1s after h1 */
+}
+
+/* Keyframes */
+@keyframes fadeSlideDownTitle {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideDownSubtitle {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* ---------------- CONTACT PAGE GIF BACKGROUND ---------------- */
+.gif-background {
+    background: url('Op\ Art\ GIF\ by\ Joe\ Winograd.gif') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    
+    /* Full height from bottom of nav to top of footer */
+    min-height: calc(100vh - 100px - 60px); /* adjust nav/footer height if needed */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* ---------------- CONTACT BOX ---------------- */
+#contact-box {
+    background: rgba(0,0,0,0.85);
+    border: 2px solid #b266ff;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 700px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 15px #b266ff, 0 0 25px #d699ff;
+    color: #fff;
+}
+
+/* Headings and Paragraphs */
+#contact-box h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+#contact-box p {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+}
+
+/* Form Styling */
+#contact-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-box label {
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+}
+
+#contact-box input,
+#contact-box textarea {
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #b266ff;
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+}
+
+#contact-box button {
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #b266ff;
+    background: #b266ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact-box button:hover {
+    background: #d699ff;
+    color: #fff;
+}
+/* Remove typing animation for the welcome paragraph */
+.text-box p, .typing-text {
+    animation: none !important;    /* disables all animations */
+    border-right: none;            /* removes the typing cursor */
+    width: auto;                   /* show full text */
+    opacity: 1;                     /* ensure it's visible */
+}
+/* Home page welcome text adjustments */
+.text-box {
+    background: rgba(0,0,0,0.7); /* semi-transparent black */
+    border: 2px solid #bb88ff;   /* purple glow border */
+    border-radius: 20px;
+    width: 90%;                  /* almost full width of container */
+    max-width: 800px;            /* limit box width for readability */
+    padding: 30px 25px;          /* smaller padding so it fits vertically */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;                   /* spacing between elements */
+    box-sizing: border-box;
+}
+
+.text-box p {
+    font-size: 1.4rem;          /* slightly smaller font */
+    line-height: 1.6;
+    margin: 0;
+}
+/* ---------------- HOME PAGE WELCOME BOX ---------------- */
+.home-box {
+    background: rgba(0,0,0,0.8); /* box behind all text */
+    padding: 30px 40px;
+    border-radius: 25px;
+    display: inline-block; /* shrink-wrap to content */
+    max-width: 800px;      /* keeps box reasonable width */
+    text-align: center;
+    box-shadow: 0 0 20px rgba(128,0,128,0.7);
+}
+
+.header-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.header-box h1 {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.header-gif {
+    width: 60px;
+    height: auto;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+

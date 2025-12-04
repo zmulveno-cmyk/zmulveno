@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoei Mulvenon - Home</title>
+  <link rel="stylesheet" href="zoei.css">
+</head>
+<body>
+  <header>
+    <h1 class="animate-title">Zoei Mulvenon</h1>
+    <p class="animate-subtitle">Designer • Developer • Creator</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+ <section class="gif-background">
+  <div class="hero-container">
+
+    <div class="home-box">
+      <div class="header-box">
+        <h1 class="animate-title">Welcome</h1>
+        <img src="Wave Waving Hand Sticker.gif" alt="Small GIF" class="header-gif">
+      </div>
+      <div class="text-content">
+        <p>Welcome to my creative world, where design meets innovation.
+          I specialize in media arts and storytelling that captivate
+          and inspire. Explore my projects and let's create something
+          extraordinary together!!!!!!</p>
+        <p>Take a look around!</p>
+      </div>
+    </div>
+</section>
+
+  <footer>
+    <p>© 2025 Zoei Mulvenon</p>
+  </footer>
+
+  <script>
+let text = document.querySelector(".typing-text").textContent;
+document.querySelector(".typing-text").textContent = "";
+let i = 0;
+let speed = 70;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.querySelector(".typing-text").textContent += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  } else {
+    document.getElementById("myVideo").style.display = "block";
+  }
+}
+
+window.onload = typeWriter;
+</script>
+
+</body>
+</html>
